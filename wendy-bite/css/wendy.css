@@ -1,0 +1,95 @@
+/*CSS Reset: '*'' is wildcard that targets everything*/
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none; /*this removes the bullets in ul lists*/
+}
+
+/*End CSS Reset*/
+
+body {
+	font-family: "Times New Roman";
+	background: #444444;
+	padding: 35px;
+	border: 4px solid #777777;
+	margin: 20px;
+	width: 600px;
+	color: white;
+}
+
+/*HEADINGS*/
+
+header {
+	border-bottom: 2px solid #777777;
+	margin-bottom: 30px;
+}
+
+header,
+footer {
+	text-align: center;
+}
+
+header p {
+	font-size: 32px;
+	font-style: italic;
+	margin-bottom: 20px;
+
+}
+
+ul {	
+	text-align: center;
+	font-size: 14px;
+}
+
+header ul {
+	padding-bottom: 20px;
+}
+
+h1,
+h2,
+ul {
+	font-family: Arial;
+}
+
+li {
+	display: inline;
+	border-right: 2px solid #777777;
+	padding-right: 5px;
+	margin-right: 5px;
+}
+
+li:last-child {
+	border: 0;
+}
+
+a {
+	color: #03D59D
+}
+
+h1 {
+	font-size: 21px;
+	margin-bottom: 20px;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+img {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #777777;
+	padding: 3px;
+}
+
+footer {
+	border-top: 2px solid #777777;
+	padding-top: 20px;
+	margin-top: 20px;
+}
+
+
