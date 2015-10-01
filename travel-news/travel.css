@@ -1,0 +1,90 @@
+/*CSS Reset: '*'' is wildcard that targets everything*/
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none; /*this removes the bullets in ul lists*/
+}
+
+/*End CSS Reset*/
+
+body {
+	font-family: "Georgia";
+	background: white;
+	width: 600px;
+	margin: auto;
+}
+
+header {
+	padding-top: 5px;
+}
+
+header img {
+	display: block;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+
+header div {
+	border-top: 1.5px solid lightgray;
+}
+
+header p {
+	padding: 15px;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+span#subscribe {
+	display: inline;
+	float: right;
+	color: #005587;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+span#caption {
+	font-family: arial;
+	display: block;
+	text-align: right;
+	color: gray;
+	font-size: 12px;
+	margin-top: 5px;
+	margin-right:20px;
+}
+
+li {
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+li:last-child {
+	border: none;
+}
+
+li img {
+	width: "75";
+}
+
+h2 {
+	font-size: 23px;
+	line-height: 1.3em;
+}
+
+li p {
+	margin-top: 5px;
+	color: gray;
+	font-size: 17px;
+}
+
+
+
