@@ -1,0 +1,118 @@
+/*CSS Reset: '*'' is wildcard that targets everything*/
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none; /*this removes the bullets in ul lists*/
+}
+
+/*End CSS Reset*/
+
+body {
+	font-family: helvetica;
+	font-size: 16px;
+}
+
+header {
+	padding: 20px;
+}
+
+h1 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 60;
+}
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 24;
+	margin-left: 20px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+ul {
+	text-align: right;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 25px;
+	border-bottom: 1px solid lightblue;
+	background-color: lightblue;
+}
+
+ul a:link {
+	color: black;
+}
+
+ul a:hover {
+	color: #45565c;
+}
+
+li {
+	font-family: 'Raleway', sans-serif;
+	font-size: 24;
+	display: inline;
+	margin-left: 25;
+}
+
+li:last-child {
+	border: none;
+}
+
+
+a:link {
+	color: #566c73;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #566c73;
+}
+
+a:hover {
+	color: orange;
+}
+
+p {
+	font-family: arial;
+	font-size: 15px;
+	margin: 25px;
+	width: 500px;
+	line-height: 1.5em;
+}
+
+img {
+	float: left;
+	padding: 3px;
+	border: 1px solid lightblue;
+	margin-left: 25px;
+	margin-top: 25px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+footer ul {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 25px;
+	border-top: 2px solid lightblue;
+	background-color: white;
+}
+
+footer li {
+	font-family: 'Raleway', sans-serif;
+	font-size: 16;
+	line-height: 1.5em;
+	display: block;
+	margin-left: 25;
+}
+
+li:last-child {
+	border: none;
+}
+
+
+
+

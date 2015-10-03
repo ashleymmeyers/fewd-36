@@ -46,6 +46,7 @@ span#subscribe {
 	float: right;
 	color: #005587;
 	font-size: 13px;
+	line-height: 20px;
 	font-weight: normal;
 }
 
@@ -72,7 +73,9 @@ li:last-child {
 }
 
 li img {
-	width: "75";
+	float: right;
+	width: 100px;
+	height: 100px;
 }
 
 h2 {
@@ -84,6 +87,7 @@ li p {
 	margin-top: 5px;
 	color: gray;
 	font-size: 17px;
+	line-height: 20px;
 }
 
 

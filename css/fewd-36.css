@@ -1,0 +1,62 @@
+/*CSS Reset: '*'' is wildcard that targets everything*/
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none; /*this removes the bullets in ul lists*/
+}
+
+/*End CSS Reset*/
+
+body {
+	font-family: helvetica;
+	font-size: 16px;
+}
+
+header {
+	background-color: lightblue;
+	padding: 20px;
+}
+
+h1 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 60;
+}
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 24;
+	margin-left: 20px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+li {
+	margin: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid lightblue;
+	width: 650px;
+}
+
+a:link {
+	color: black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: lightblue;
+}
+
+span {
+	float: right;
+	font-size: 14px;
+	color: slategray;
+}
+
+
