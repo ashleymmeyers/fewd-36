@@ -17,10 +17,13 @@ body {
 	margin: auto;
 }
 
+/*ALL HEADER*/
+
 header {
 	padding-top: 5px;
 }
 
+/*NYT logo*/
 header img {
 	display: block;
 	margin: auto;
@@ -28,29 +31,43 @@ header img {
 	margin-bottom: 10px;
 }
 
-
 header div {
 	border-top: 1.5px solid lightgray;
+	display: flex;
+	align-items: center;
 }
 
+/*"Travel"*/
 header p {
 	padding: 15px;
 	font-family: arial;
 	font-weight: bold;
 	font-size: 20px;
+	flex: 1;
 }
 
-
-span#subscribe {
-	display: inline;
-	float: right;
+.subscribe {
+	font-family: arial;
 	color: #005587;
 	font-size: 13px;
-	line-height: 20px;
+	line-height: 11px;
 	font-weight: normal;
+	text-align: right;
+	padding-right: 15px;
+	display: flex;
 }
 
-span#caption {
+.subscribe li {
+	border-right: 2px solid #777777;
+	padding: 0px 8px;
+}
+
+.subscribe li:last-child {
+	border: 0;
+	padding-right: 5px;
+}
+
+.caption {
 	font-family: arial;
 	display: block;
 	text-align: right;
@@ -60,35 +77,55 @@ span#caption {
 	margin-right:20px;
 }
 
-li {
+/*LIST OF STORIES*/
+
+.story {
 	border-bottom: 1px solid lightgray;
 	padding-bottom: 20px;
 	padding-top: 20px;
-	margin-right: 20px;
-	margin-left: 20px;
+	padding-left: 7px;
+	padding-right: 7px;
+	margin-right: 13px;
+	margin-left: 13px;
+	display: flex;
 }
 
-li:last-child {
+.story:last-child {
 	border: none;
 }
 
-li img {
-	float: right;
+.story:first-child {
+	padding-top: 5px;
+}
+
+.story img {
 	width: 100px;
 	height: 100px;
 }
 
-h2 {
+.story div {
+	flex: 1;
+}
+
+.story h2 {
 	font-size: 23px;
 	line-height: 1.3em;
 }
 
-li p {
+.story p {
 	margin-top: 5px;
 	color: gray;
 	font-size: 17px;
 	line-height: 20px;
 }
 
+/*UPDATE*/
+h5 {
+	font-family: arial;
+	font-size: 13px;
+	margin-top: 15px;
+	margin-left: 20px;
+	font-weight: normal;
+}
 
 
