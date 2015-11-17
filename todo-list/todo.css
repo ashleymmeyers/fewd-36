@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F5F0F4;
+	margin: auto;
+}
+
+
+h1 {
+	background-color: #45D068;
+	font: bold 1.3em helvetica;
+	color: #333333;
+	height: 40px;
+	text-align: center;
+	padding-top: 10px;
+	margin-bottom: 20px;
+
+}
+
+div {
+	background-color: #D5D2D5;
+	border: 1px solid gray;
+	border-radius: 3px;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	width: 550px;
+	margin: auto;
+}
+
+form {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.task {
+	margin: 0px 8px 0px 0px;
+	padding: 15 0 15 10;
+	border-radius: 5px;
+	font: bold 16px helvetica;
+	border: 1px solid gray;
+	flex: 1;
+}
+
+.date {
+	margin: 0px 8px 0px 8px;
+	padding: 15 0 15 10;
+	border-radius: 5px;
+	font: bold 16px helvetica;
+	border: 1px solid gray;
+	flex: 1;
+	color: #333333;
+}
+
+button {
+	background-color: #829AEC;
+	flex: 0 0 120px;
+	font: bold 16px helvetica;
+	color: #333333;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 0 0 0 8px;
+}
+
+
+ul {
+	list-style: none; /*this removes the bullets in ul lists*/
+	font: 12px helvetica;
+	font-style: bold;
+	color: #333333;
+	margin-top: 10px;
+}
+
+
+
+label {
+	display: flex;
+	align-items: center;
+}
+
+.check {
+	margin: 10px;
+}
+
+.todo {
+	font: bold 16px helvetica;
+	color: #333333;
+	display: flex;
+}
+
+input:checked + .todo {
+	font: bold 16px helvetica;
+	color: #333333;
+	text-decoration: line-through;
+}
+
+.duedate {
+	font: bold 16px helvetica;
+	margin: 0 0 0 8;
+	font-style: italic;
+	font-weight: bold;
+	color: #B9A397;
+}
+
+
