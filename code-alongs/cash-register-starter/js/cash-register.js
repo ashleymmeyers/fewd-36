@@ -84,7 +84,7 @@ function removeItem (e) {
 	var child = e.target;
 	
 	var parent = e.target.parentElement;
-	var parentArray = parent.children; //only needed for line 91
+	var parentArray = parent.children; //only needed for line 91 not a real array? Node list? 
 
 	//calculate position using LI's index in UL
 	var position = Array.prototype.indexOf.call(parent.children, child);

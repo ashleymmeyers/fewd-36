@@ -11,23 +11,16 @@ var list = document.querySelector("ul");
 
 //OBJECT SETUP
 //----------------------------
-var taskz = [];
-
-var task1 = {
-	name: "call mom",
-	date: "11/22/2015", // or blank string "" or null or undefined
-	completed: false,
+var todo = {
+	"taskList": []
 }
 
-var task2 = {
-	name: "exercise",
-	date: undefined,
-	completed: true,
-};
+
 
 
 // Events
 // ----------------------------------------------
+window.addEventListener("load", pageLoad);
 form.addEventListener("submit", addNewTodo);
 // list.addEventListener -- this will be for event delegation later
 
@@ -36,50 +29,93 @@ form.addEventListener("submit", addNewTodo);
 // Event handlers
 // ----------------------------------------------
 
-//FUNCTION TO ADD TO TODO
-function addNewTodo(e) {
-	e.preventDefault();
-	console.log("test");
-//variable for values entered
-	var newTask = taskInput.value;
-	var newDate = dateInput.value;
+//Page load
+function pageLoad(e) {
+	if (localStorage.getItem("todo") === null) {
+		return;
+	}
+	else {
+		todo = JSON.parse(localStorage.getItem("todo"));
+		todo.taskList.forEach(displayTask);
+	}
 
-//all new elements
+
+}
+
+function displayTask (e) {
+
+
+
+
+
+	//all new elements
 	var newLi = document.createElement("li");
 	var newLabel = document.createElement("label");
 	var newSpan = document.createElement("span");
 	var newPdate = document.createElement("p");
 	var newCheckbox = document.createElement("input");
 
-//decorate and fill elements
-//Checkbox
+	//decorate and fill elements
+	//Checkbox
 	newCheckbox.setAttribute("type", "checkbox");
 	newCheckbox.setAttribute("class", "check");
-	newCheckbox.addEventListener("click", testIt);
-//task
-	newSpan.textContent = newTask;
-	newSpan.setAttribute("class", "todo");
-//duedate
+	newCheckbox.addEventListener("click", checkTask);
+	//task
+	newSpan.textContent = e.name;
+	newSpan.setAttribute("class", "todo");	
+	//duedate
 	newPdate.setAttribute("class", "duedate");
-	if (newDate.length>0) {
-		newPdate.textContent = "(" + newDate + ")";
-	}
+	newPdate.textContent = e.date;
 
-
-//place elements
+	//place elements
 	newSpan.appendChild(newPdate);
 	newLabel.appendChild(newCheckbox);
 	newLabel.appendChild(newSpan);
 	newLi.appendChild(newLabel);
 	list.appendChild(newLi);
 
-//clear form
+
+}
+
+
+
+
+//FUNCTION TO ADD TO TODO
+function addNewTodo(e) {
+	e.preventDefault();
+	//variable for values entered
+	var newTask = taskInput.value;
+	var newDate = dateInput.value;
+
+	if (newDate.length>0) {
+		newDate = "(" + newDate + ")";
+	}
+
+	//store in JSON
+	taskObject = {
+		name: newTask,
+		date: newDate,
+		completed: false,
+	}
+
+	displayTask(taskObject);
+
+
+	//add object to array
+	todo.taskList.push(taskObject);
+	//store in local storage
+	localStorage.setItem("todo", JSON.stringify(todo));
+
+	//clear form
 	form.reset();
 };
 
 
-function testIt(e) {
+
+
+function checkTask(e) {
 	console.log("test");
-	console.log(event.target);
+	console.log(e.target);
+	e.target
 }
 
