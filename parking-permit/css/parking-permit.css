@@ -36,6 +36,13 @@ p {
 	margin: 15px 0px; 
 }
 
+h2 {
+	margin: 25 0 10 0;
+}
+
+#firsth2 {
+	margin: 0 0 10 0;
+}
 
 
 
@@ -71,8 +78,6 @@ header {
 
 
 }
-
-
 
 h1 {
 	color: #538012;
@@ -134,7 +139,7 @@ form button {
 	margin: auto;
 	background-color: red;
 	border: 2px solid black;
-	max-width: 450px;
+	width: 450px;
 	margin-top: 35px;
 	flex-direction: column;
 }
@@ -195,6 +200,7 @@ form button {
 .application button {
 	width: 145px;
 	margin: auto;
+	margin-top: 35px;
 }
 
 
@@ -233,16 +239,20 @@ footer {
 
 /*RESPONSIVENESS*/
 /*----------------------------------------*/
-@media (max-width: 600px) {
+@media (max-width: 736px) {
 	.bigflex {
 		flex-direction: column;
 		margin: 0px 22px;
 	}
 
-	.special {
+	.side {
 		width: auto;
-		padding: 15px;
+		margin: 35 0 0 0;
+	}
+
+	.special {
 		margin: 0;
+		width: auto;
 	}
 
 	header {
@@ -261,6 +271,11 @@ footer {
 
 	.breadcrumb {
 		display: none;
+	}
+
+	.zoneresults {
+		width: auto;
+		margin: 35 0 0 0;
 	}
 
 	footer {
