@@ -83,14 +83,20 @@ function setZone () {
 function showZone() {
 	// console.log("showZone");
 	zone = zoneData["zone"]
+	expDate = zoneData["exp_date"]
 	news.textContent = "Good news! Your address qualifies."
 	zoneTag.removeAttribute("class"); 
 	zoneTag.setAttribute("class", zone);
 	myCleanDate.textContent = ("on " + zoneData["clean_date"]);
 
 	myZone.textContent = zone;
-	
-	myFee.textContent = zone + " Zone permits expire annually on " + zoneData["exp_date"] + ". Because this is in less than 6 months, your annual fee of $111 will be reduced to $55 this year.";
+	//calculate if <6 months expiration
+	var nowMonth = (new Date()).getMonth();
+	var expMonth = new Date(expDate).getMonth();
+
+
+
+	myFee.textContent = zone + " Zone permits expire annually on " + expDate + ". Because this is in less than 6 months, your annual fee of $111 will be reduced to $55 this year.";
 	preFill();
 }
 
