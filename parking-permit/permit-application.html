@@ -60,6 +60,13 @@
 
 				<p class="fee">Q Zone permits expire annually on March 5, 2016. Because this is in less than 6 months, your annual fee of $111 will be reduced to $55 this year.</p>
 			</div>
+			<div id="nozonefaq" class="hide">
+				Not what you were expecting?
+				<ul>
+					<li><a href="http://sfgov.maps.arcgis.com/apps/OnePane/basicviewer/index.html?appid=5bef0e4bcb6c430eb636101648cefdca" target="blank">Double-check the map.</a></li>
+					<li><a href="http://www.sfmta.com/services/permits-citations/parking-permits/residential-area-permits/request-permit-area-expansion" target="blank">What if I don't live in an existing permit zone?</a></li>
+				</ul>
+			</div>
 		</div>
 
 
@@ -80,43 +87,47 @@
 
 
 
-		<h2>Fill out the application</h2>
+		<h2>Fill out the application below.</h2>
 
 		<form class="application">
 			<span>
-				<input type="text" placeholder="First Name" class="fullwidth">
-				<input type="text" placeholder="Last Name" class="fullwidth">
+				<input type="text" name="firstName" placeholder="First Name" class="fullwidth" required>
+				<input type="text" name="lastName" placeholder="Last Name" class="fullwidth" required>
 			</span>
 			<span>
-				<input type="text" placeholder="Email" class="fullwidth">
-				<input type="text" placeholder="Cell Phone" class="fullwidth">
+				<input type="email" name="email" placeholder="Email" class="fullwidth" required>
+				<input type="text" name="phone" placeholder="Cell Phone" class="fullwidth" required>
 			</span>
 			<h4>Address</h4>	
 			<span>
-				<input type="text" placeholder="Number" id="appnumber">
-				<input type="text" placeholder="Street" id="appstreet">
-				<input type="text" placeholder="Zip Code" id="appzip">
+				<input type="text" placeholder="Number" id="appnumber" required>
+				<input type="text" placeholder="Street" id="appstreet" required>
+				<input type="text" placeholder="Zip Code" id="appzip" required>
 			</span>
 			<h4>Vehicle Information</h4>
 			<span>
-				<input type="text" placeholder="Make">
-				<input type="text" placeholder="Model">
+				<input type="text" name="make" placeholder="Make" required>
+				<input type="text" name="model" placeholder="Model" required>
 			</span>
 			<span>
-				<input type="text" placeholder="License Plate">
-				<input type="text" placeholder="Year">
+				<input type="text" name="plate" placeholder="License Plate" required>
+				<input type="text" name="year" placeholder="Year" required>
 			</span>
-			<span>
-				<label><input type="file">California Vehicle Registration
-			</span>
+			<div class"uploadgroup">
+				<div class="uploadbutton">
+   				 Upload
+   					 <input type="file" class="upload" />
+				</div>
+				<p>California Vehicle Registration</p>
+			</div>
 			<span>
 				<label><input type="file">Proof of Insurance</label>
 			</span>
 
-			<h4>Payment</h4>
+			<h4>Pay the fee for your permit</h4>
 			<p>We'll review your application information and your documents to make sure they meet the requirements, and your card will only be charged if your permit is approved.</p>
 			
-			<p class="feetext">Pay the fee for your permit.</p>
+			<p class="feetext">$55</p>
 			<span>
 				
 				<input type="text" placeholder="Credit Card Number" id="creditcard">
@@ -170,7 +181,9 @@
 <!-- 		<p>This is a prototype created in December 2015 by Ashley Meyers</p> -->
 	</footer>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
 <script src="js/parking-permit.js"></script>
 
 </body>

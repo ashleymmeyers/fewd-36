@@ -15,18 +15,24 @@ var myExpDate;
 var myCleanDate = document.querySelector('#cleandate');
 var news = document.querySelector('.news');
 var zoneTag = document.querySelector('#zonetag');
+var noZoneFAQ = document.querySelector('#nozonefaq');
 
 
 //APP FORM
+var appForm = document.querySelector(".application");
 var appNumber = document.querySelector('#appnumber');
 var appStreet = document.querySelector('#appstreet');
 var appZip = document.querySelector('#appzip');
 
 
 
+var myFirebaseRef = new Firebase("https://parking-permit.firebaseIO.com");
+var appsFirebaseRef = new Firebase("https://parking-permit.firebaseIO.com/apps");
+
 // Events
 // ----------------------------------------------
 checkForm.addEventListener("submit", getZone);
+appForm.addEventListener("submit", submitApp);
 
 
 
@@ -56,19 +62,22 @@ function storeJSON(json){
 function setZone () {
 	// console.log("setZone");
 	//Checking if neither "fell" nor "larkin", if so return
-	if ( (myStreet.indexOf("fell") == -1) && (myStreet.indexOf("larkin") == -1) ) {
+	if ( (myStreet.indexOf("larkin") == -1) && (myStreet.indexOf("eddy") == -1) ) {
 		console.log("no street");
+		zoneTag.setAttribute("class", "nozone");
+		news.textContent = "Sorry, that address is not in a residential parking permit zone.";
+		noZoneFAQ.removeAttribute("class");
 		return;
 	}
 
 	//check if "fell", if so set var zoneData to object 0
-	if (myStreet.indexOf("fell") == 0) {
-		zoneData = zoneData[0];
+	if (myStreet.indexOf("eddy") == 0) {
+		zoneData = zoneData[1];
 	}
 
 	//check if "larkin", if so set var zoneData to object 1
 	if (myStreet.indexOf("larkin") == 0) {
-		zoneData = zoneData[1]
+		zoneData = zoneData[0]
 	}
 
 	showZone();
@@ -86,13 +95,14 @@ function showZone() {
 	expDate = zoneData["exp_date"]
 	news.textContent = "Good news! Your address qualifies."
 	zoneTag.removeAttribute("class"); 
+	noZoneFAQ.setAttribute("class", "hide");
 	zoneTag.setAttribute("class", zone);
 	myCleanDate.textContent = ("on " + zoneData["clean_date"]);
 
 	myZone.textContent = zone;
 	//calculate if <6 months expiration
-	var nowMonth = (new Date()).getMonth();
-	var expMonth = new Date(expDate).getMonth();
+	// var nowMonth = (new Date()).getMonth();
+	// var expMonth = new Date(expDate).getMonth();
 
 
 
@@ -109,6 +119,27 @@ function preFill(e) {
 	appZip.value = checkZip.value;
 }
 
+
+//to submit application
+function submitApp(form) {
+	event.preventDefault();
+	// Store to firebase
+	var newApp = appsFirebaseRef.push({
+	          firstName: appForm.firstName.value,
+	          lastName: appForm.lastName.value,
+	          email: appForm.email.value,
+	          phone: appForm.phone.value,
+	          addressNum: appNumber.value,
+	          addressStreet: appStreet.value,
+	          addressZip: appZip.value,
+	          make: appForm.make.value,
+	          model: appForm.model.value,
+	          plate: appForm.plate.value,
+	          year: appForm.year.value
+	    });
+	var newKey = newApp.key();
+	console.log(newKey);
+}
 
 
 

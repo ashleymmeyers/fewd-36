@@ -228,6 +228,21 @@ form button {
 	margin: 0px;
 }
 
+#nozonefaq {
+	background-color: #F5F5F5;
+	padding: 10px;
+	margin: 0px;
+}
+
+#nozonefaq.hide {
+	display: none;
+}
+
+#nozonefaq ul {
+	margin: 0px 35px;
+	display: block;
+	list-style: square;
+}
 
 
 
@@ -243,10 +258,25 @@ form button {
 
 /*APPLICATION*/
 /*----------------------------------------*/
+h4 {
+	color: #4F5349;
+	font-size: 18px;
+	text-transform: uppercase;
+	border-top: 1px solid lightgray;
+	margin: 20px 0 5 0;
+	padding: 5 0 0 0;
+
+}
 .application {
 	display: flex;
 	flex-direction: column;
 }
+
+/*HAVING TROUBLE WITH THIS WORKING
+
+.application.submitted input:invalid {
+	border: 1px solid red;
+}*/
 
 .application span {
 	display: flex;
@@ -283,6 +313,38 @@ form button {
 	width: 332;
 }
 
+.uploadgroup {
+	display: flex;
+}
+
+.uploadbutton {
+	border-radius: 6px;
+	height: 36px;
+	font: bold 14px arial;
+	color: white;
+	background-color: darkgrey;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    width: 60px;
+}
+
+.uploadbutton:hover {
+	background-color: #538012;
+}
+
+.uploadbutton input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
 
 
 /*SPECIAL EXCEPTIONS*/
@@ -296,6 +358,12 @@ form button {
 	width: 300px;
 }
 
+h3 {
+	margin-bottom: 15px;
+	color: #4F5349;
+	font-size: 18px;
+	text-transform: uppercase;
+}
 
 .special ul {
 	margin: 0px 25px;
