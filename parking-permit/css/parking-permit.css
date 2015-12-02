@@ -102,8 +102,21 @@ h1 {
 /*Zone Validation Check
 --------------------------------------*/
 
-.zonecheck {
+.zonecheck form {
 	display: flex;
+	flex-wrap: wrap;
+}
+
+#checknumber {
+	width: 70px;
+}
+
+#checkzip {
+	width: 100px;
+}
+
+#checkstreet {
+	flex-grow: 1;
 }
 
 form input {
@@ -132,41 +145,87 @@ form button {
 	font: bold 14px arial;
 	color: white;
 	padding: 10px;
+	margin: 0px 5px;
 }
+
+/*ZONE RESULTS
+----------------------------*/
 
 .zoneresults {
 	display: flex;
 	margin: auto;
-	background-color: red;
-	border: 2px solid black;
+	border-top: 1px solid lightgray;
 	width: 450px;
 	margin-top: 35px;
 	flex-direction: column;
 }
 
+#zonetag.Q {
+	background-color: #E46300;
+}
+
+#zonetag.A {
+	background-color: darkred;
+}
+
+.zoneresults .news {
+	background-color: #F5F5F5;
+	color: #4F5349;
+	padding: 10px;
+	margin: 0;
+	font: bold 24px arial;	
+}
+
+.nozone {
+	display: none;
+}
+
+
+
 .yourzone {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0px;
 }
 
-.news {
-	font: bold 24px arial;
-	color: white;
-}
 
 .zonelabel {
-	font: bold 24px arial;
+	font: bold 30px arial;
 	color: white;
+	margin: 0 40 0 40;
+}
+
+.letterlabel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .letter {
-	font: bold 80px arial;
+	font: bold 120px arial;
 	color: white;
+	line-height: 100%;
+	margin: 0 40 0 40;
+}
+
+.renews {
+	color: white;
+	font: bold 22px arial;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 40 0 40;
+}
+
+.renews p {
+	margin: 5px 0px;
 }
 
 .fee {
-	background-color: lightgrey;
-	font: 13px arial;
+	background-color: #F5F5F5;
+	padding: 10px;
+	margin: 0px;
 }
 
 
@@ -189,11 +248,24 @@ form button {
 	flex-direction: column;
 }
 
-#number {
+.application span {
+	display: flex;
+}
+
+.application span .fullwidth {
+	flex: 1;
+	min-width: 300;
+}
+
+.application span #appnumber {
 	width: 70px;
 }
 
-#zip {
+.application span #appstreet {
+	flex: 1;
+}
+
+.application span #appzip {
 	width: 100px;
 }
 
@@ -201,6 +273,14 @@ form button {
 	width: 145px;
 	margin: auto;
 	margin-top: 35px;
+}
+
+.application span #fee {
+	display: inline;
+}
+
+.application #creditcard {
+	width: 332;
 }
 
 
@@ -275,7 +355,12 @@ footer {
 
 	.zoneresults {
 		width: auto;
-		margin: 35 0 0 0;
+		max-width: 450px;
+		margin: 35px auto;
+	}
+
+	.application span {
+		flex-wrap: wrap;
 	}
 
 	footer {
@@ -284,5 +369,7 @@ footer {
 		padding: 0;
 		border-top: 6px solid #538012;
 	}
+
+
 }
 

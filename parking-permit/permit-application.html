@@ -37,26 +37,29 @@
 
 		<div class="zonecheck">
 			<form>
-					<input type="text" placeholder="Number" id="number">
-					<input type="text" placeholder="Street" id="street">
-					<input type="text" placeholder="Zip Code" id="zip">
-					<button>Check</button>
+					<input type="text" placeholder="Number" id="checknumber">
+					<input type="text" placeholder="Street" id="checkstreet">
+					<input type="text" placeholder="Zip Code" id="checkzip">
+					<button id="checkzone">Check</button>
 			</form>
 		</div>
 
 		<div class="zoneresults">
-			<span class="yourzone">
-				<p class="news">Good news! Your address qualifies.</p>
-					Renews Annually on March 5th
-				<!-- How to convey that fee is only for 6 months? -->
-				<span>
-					<p class="zonelabel">ZONE</p>
-					<p class="letter">Q</p>
+			<p class="news">Enter your address above.</p>
+			<div class="nozone" id="zonetag">
+				<span class="yourzone">
+					<span class="letterlabel">
+						<p class="letter">?</p>
+						<p class="zonelabel">ZONE</p>
+					</span>
+					<span class="renews">
+					<p>Renews annually</p>
+					<p id="cleandate">on March 5th</p>
+					</span>
 				</span>
-			</span>
-			<span class="fee">
-				<p>Q Zone permits expire annually on March 5, 2016. Because this is in less than 6 months, your annual fee of $111 will be reduced to $55 this year.</p>
-			</span>
+
+				<p class="fee">Q Zone permits expire annually on March 5, 2016. Because this is in less than 6 months, your annual fee of $111 will be reduced to $55 this year.</p>
+			</div>
 		</div>
 
 
@@ -81,38 +84,44 @@
 
 		<form class="application">
 			<span>
-				<input type="text" placeholder="First Name">
-				<input type="text" placeholder="Last Name">
+				<input type="text" placeholder="First Name" class="fullwidth">
+				<input type="text" placeholder="Last Name" class="fullwidth">
 			</span>
 			<span>
-				<input type="text" placeholder="Number" id="number">
-				<input type="text" placeholder="Street" id="street">
-				<input type="text" placeholder="Zip Code" id="zip">
+				<input type="text" placeholder="Email" class="fullwidth">
+				<input type="text" placeholder="Cell Phone" class="fullwidth">
 			</span>
+			<h4>Address</h4>	
 			<span>
-				<input type="text" placeholder="Email">
-				<input type="text" placeholder="Cell Phone">
+				<input type="text" placeholder="Number" id="appnumber">
+				<input type="text" placeholder="Street" id="appstreet">
+				<input type="text" placeholder="Zip Code" id="appzip">
 			</span>
 			<h4>Vehicle Information</h4>
 			<span>
-				<input type="text" placeholder="License Plate">
 				<input type="text" placeholder="Make">
 				<input type="text" placeholder="Model">
+			</span>
+			<span>
+				<input type="text" placeholder="License Plate">
 				<input type="text" placeholder="Year">
 			</span>
 			<span>
-				<input type="file">California Vehicle Registration
+				<label><input type="file">California Vehicle Registration
 			</span>
 			<span>
-				<input type="file">Proof of Residence
+				<label><input type="file">Proof of Insurance</label>
 			</span>
 
+			<h4>Payment</h4>
 			<p>We'll review your application information and your documents to make sure they meet the requirements, and your card will only be charged if your permit is approved.</p>
 			
-			<h4>Payment</h4>
+			<p class="feetext">Pay the fee for your permit.</p>
 			<span>
-				Pay the fee of <span id="fee">$111</span> for your Q zone permit expiring May 31, 2016.
-				<input type="text" placeholder="Credit Card Number">
+				
+				<input type="text" placeholder="Credit Card Number" id="creditcard">
+			</span>
+			<span>
 				<input type="text" placeholder="Expiration Date">
 				<input type="text" placeholder="Security Code">
 			</span>
@@ -161,7 +170,8 @@
 <!-- 		<p>This is a prototype created in December 2015 by Ashley Meyers</p> -->
 	</footer>
 
-<script src="parking-permit.jss"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/parking-permit.js"></script>
 
 </body>
 </html>
