@@ -1,22 +1,16 @@
 {
-	"Fell": [
+	"zones": [
 		{
+			"street": "fell",
 			"zone": "Q",
-			"exp_date": "12/31",
-			"clean_date": "December 31st",
-			// "fee": "$55"
-		}
-	],
-
-	"Larkin": [
+			"exp_date": "12/31/15",
+			"clean_date": "December 31st"
+		},
 		{
+			"street": "larkin",
 			"zone": "A",
-			"exp_date": "2/28",
-			"clean_date": "February 28th",
-			// "fee": "$55",
+			"exp_date": "2/28/16",
+			"clean_date": "February 28th"
 		}
-
 	]	
-
-
 }
