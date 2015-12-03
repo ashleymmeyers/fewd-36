@@ -31,6 +31,7 @@ var main = document.querySelector(".main");
 
 var myFirebaseRef = new Firebase("https://parking-permit.firebaseIO.com");
 var appsFirebaseRef = new Firebase("https://parking-permit.firebaseIO.com/apps");
+var newKey;
 
 // Events
 // ----------------------------------------------
@@ -141,6 +142,9 @@ function submitApp(form) {
 	          year: appForm.year.value
 	    });
 
+	var newKey = newApp.key();
+	console.log('my new shiny id is '+ newKey);
+
 	var confirm = document.createElement("div");
 	confirm.setAttribute("class", "confirm");
 	var confirmText = document.createElement("p");
@@ -152,9 +156,6 @@ function submitApp(form) {
 	confirm.appendChild(nextStep);
 	main.appendChild(confirm);
 
-
-	// var newKey = newApp.key();
-	// console.log(newKey);
 }
 
 
