@@ -25,6 +25,9 @@ var appStreet = document.querySelector('#appstreet');
 var appZip = document.querySelector('#appzip');
 
 
+//CONFIRM
+var main = document.querySelector(".main");
+
 
 var myFirebaseRef = new Firebase("https://parking-permit.firebaseIO.com");
 var appsFirebaseRef = new Firebase("https://parking-permit.firebaseIO.com/apps");
@@ -137,8 +140,21 @@ function submitApp(form) {
 	          plate: appForm.plate.value,
 	          year: appForm.year.value
 	    });
-	var newKey = newApp.key();
-	console.log(newKey);
+
+	var confirm = document.createElement("div");
+	confirm.setAttribute("class", "confirm");
+	var confirmText = document.createElement("p");
+	confirmText.textContent = "Thanks, " + appForm.firstName.value + ". Your application for " + appNumber.value + " " + appStreet.value + " has been submitted.";
+	confirm.appendChild(confirmText);
+	var nextStep = document.createElement("p");
+	nextStep.setAttribute("class", "fee");
+	nextStep.textContent = "We'll process your application within 21 days, and will contact you if we have any questions.";
+	confirm.appendChild(nextStep);
+	main.appendChild(confirm);
+
+
+	// var newKey = newApp.key();
+	// console.log(newKey);
 }
 
 
