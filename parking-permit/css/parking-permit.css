@@ -51,13 +51,13 @@ h2 {
 header {
 	border-top: 6px solid #538012;
 	background-color: #F5F5F5; 
-	height: 150px;
+	height: 155px;
 	padding: 20 0 0 40;
 	border-bottom: 1px solid lightgray;
 }
 
 .topnav {
-	margin: 15px 0px;
+	margin: 15px 0px 20px 0px;
 	font-size: 19px;
 	color: #666;
 }
@@ -88,7 +88,8 @@ h1 {
 	color: #538012;
 	font-size: 36px;
 	font-weight: bold;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
 	margin: 20px 0px;
 	padding-left: 40px;
 }
